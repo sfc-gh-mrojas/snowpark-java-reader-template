@@ -1,0 +1,8 @@
+target/classes/
+target/generated-sources/
+target/maven-archiver/
+target/maven-status/
+target/archive-tmp/
+
+target/customreader-0.0.1.jar
+target/customreader-0.0.1-jar-with-dependencies.jar
