@@ -13,42 +13,18 @@ import java.io.FileOutputStream;
 
 
 class DataRow {
-    public String receiverId;
-    public String parentReceiverId;
-    public String receiverModel;
-    public String equipmentModel;
-    public String accountId;
-    public String dma;
-    public String postalCode;
-    public String provisionedLocal;
-    public String receivers;
-    public String serviceCodes;
-    public String unresolvedToken;
-    public String accountType;
-    public String unresolvedTokenPayloadConfirmationCode;
-    public String receiverInstallDate;
-    public String[] payloadArray;	
+    public String column1;
+    public String column2;
+    public String column3;
+    public String column4;	
     public String inputPath;
 
+    public DataRow() {
+        // Empty Constructor
+    }
 
-    public DataRow(String key,String content) {
-        String[] receiverPayloads = content.split("\001");
-         receiverId = receiverPayloads[0];
-         parentReceiverId = receiverPayloads[1];
-         receiverModel = receiverPayloads[2];
-         equipmentModel = receiverPayloads[3];
-         accountId = replaceNull(receiverPayloads[4]);
-         dma = replaceNull(receiverPayloads[5]);
-         postalCode = replaceNull(receiverPayloads[6]);
-         provisionedLocal = receiverPayloads[7];
-         receivers = receiverPayloads[8];
-         serviceCodes = receiverPayloads[9];
-         unresolvedToken = replaceNull(receiverPayloads[10]);
-         accountType = replaceNull(receiverPayloads[11]);
-         unresolvedTokenPayloadConfirmationCode = replaceNull(receiverPayloads[12]);
-         receiverInstallDate = replaceNull(receiverPayloads[14]);
-         payloadArray = receiverPayloads[13].split("\002");	
-         inputPath = receiverPayloads[14];
+    public DataRow(String column1, String column2, String column3, String column4) {
+
     }
 
     public static String replaceNull(String inStr) {
